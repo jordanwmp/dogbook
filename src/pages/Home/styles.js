@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     },
     textButton:{
         color: '#fff',
+        fontWeight: 'bold'
     }
 })
 

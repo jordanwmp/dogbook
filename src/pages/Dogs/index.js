@@ -1,7 +1,12 @@
-import {View, Text, Button} from 'react-native'
-import { globalContainer } from '../../global/globalStyles'
+import { View, Text, FlatList } from 'react-native'
+
+import styles from './styles'
 
 import { useNavigation } from '@react-navigation/native'
+
+import HorizontalCard from '../../components/HorizontalCard/HorizontalCard'
+
+import data from '../../data/data'
 
 function Dogs(){
 
@@ -12,11 +17,14 @@ function Dogs(){
     }
 
     return (
-        <View style={globalContainer.container}>
-            <Text>DOG LIST</Text>
-            <Button
-                title="IR PARA DETALHES"
-                onPress={callDetail}
+        <View style={styles.container}>
+            <Text style={styles.label}>Highlights</Text>
+            <FlatList
+              data={data}
+              keyExtractor={ (item) => item.name } 
+              renderItem={ ({item}) =>  <HorizontalCard dog={item} />} 
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
             />
         </View>
     )

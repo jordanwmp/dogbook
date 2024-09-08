@@ -26,13 +26,16 @@ function App(){
         name="Lista"
         component={Dogs}
         options={{
-          title: 'Cães'
+          title: 'Pets'
         }}
       />
 
       <Stack.Screen 
         name="Detalhes"
         component={Detail}
+        options={{
+          title: 'Details'
+        }}
       />
 
       </Stack.Navigator>
