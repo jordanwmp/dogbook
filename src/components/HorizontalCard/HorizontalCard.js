@@ -3,18 +3,27 @@ import { View, Text, Image, TouchableWithoutFeedback } from 'react-native'
 
 import styles from './styles'
 
-function HorizontalCard( { dog } ) {
-    
+import { useNavigation } from '@react-navigation/native'
+
+function HorizontalCard({ dog }) {
+
+    const navigation = useNavigation()
+
     return (
-        <View style={styles.card}>
-            <Image
-                source={{uri: dog.image_link}}
-                style={styles.petImage}
-            />
-            <Text style={styles.petName}>{dog.name} </Text>
-            <Text style={styles.petInfo}>Protectiveness: {dog.protectiveness}</Text>
-            <Text styles={styles.petInfo}>Energy: {dog.energy}</Text>
-        </View>
+        <TouchableWithoutFeedback 
+        onPress={()=> navigation.navigate('Detalhes', {...dog})}
+        >
+            <View style={styles.card}>
+                <Image
+                    source={{ uri: dog.image_link }}
+                    style={styles.petImage}
+                />
+                <Text style={styles.petName}>{dog.name} </Text>
+                <Text style={styles.petInfo}>Protectiveness: {dog.protectiveness}</Text>
+                <Text styles={styles.petInfo}>Energy: {dog.energy}</Text>
+            </View>
+        </TouchableWithoutFeedback>
+
     )
 }
 

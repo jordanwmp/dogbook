@@ -1,21 +1,54 @@
-import {View, Text, Button} from 'react-native'
-import { globalContainer } from '../../global/globalStyles'
-
+import { View, Text, Button, Image } from 'react-native'
 import { useRoute, useNavigation } from '@react-navigation/native'
 
-function Detail(){
+import styles from './styles'
+
+function Detail() {
 
     const navigate = useNavigation()
     const route = useRoute()
 
+    const {
+        name, 
+        image_link, 
+        
+        energy,
+        protectiveness, 
+        max_life_expectancy,
+        min_weight_male,
+
+        good_with_children,
+        good_with_strangers,
+        trainability,
+        
+    } = route.params
+
     return (
-        <View style={globalContainer.container}>
-            <Text>VOLTAR PARA A LISTA</Text>
-            <Text>Raça: {route.params.name}</Text>
-            <Button
-                title="VOLTAR PARA A LISTA"
-                onPress={() => navigate.goBack()}
+        <View style={styles.container}>
+            <Image
+                source={{ uri: image_link }}
+                style={styles.petImage}
             />
+
+            <View style={styles.cardInfo}>
+
+                <Text style={styles.petName} >{name}</Text>
+
+                <Text style={styles.textLabel}>Physical characteristics</Text>    
+
+                <Text style={styles.petInfo}>Energy: {energy}</Text>
+                <Text style={styles.petInfo}>Protectiveness: {protectiveness}</Text>
+                <Text style={styles.petInfo}>Min weight: {min_weight_male}</Text>
+                <Text style={styles.petInfo}>Min weight: {min_weight_male}</Text>
+
+
+                <Text style={styles.textLabel}>Behavioral characteristics</Text> 
+
+                <Text style={styles.petInfo}>Energy: {energy}</Text>
+                <Text style={styles.petInfo}>Protectiveness: {protectiveness}</Text>
+                <Text style={styles.petInfo}>Min weight: {min_weight_male}</Text>
+
+            </View>
         </View>
     )
 }
