@@ -77,7 +77,61 @@ const data = [
     min_weight_male: 45,
     min_weight_female: 35,
     name: "Siberian Husky"
-  }
+  },
+
+  {
+    image_link: "https://api-ninjas.com/images/dogs/german_shepherd_dog.jpg",
+    good_with_children: 5,
+    good_with_other_dogs: 3,
+    shedding: 4,
+    grooming: 2,
+    drooling: 2,
+    coat_length: 1,
+    good_with_strangers: 3,
+    playfulness: 4,
+    protectiveness: 5,
+    trainability: 5,
+    energy: 5,
+    barking: 3,
+    min_life_expectancy: 7,
+    max_life_expectancy: 10,
+    max_height_male: 26,
+    max_height_female: 26,
+    max_weight_male: 90,
+    max_weight_female: 70,
+    min_height_male: 24,
+    min_height_female: 24,
+    min_weight_male: 65,
+    min_weight_female: 50,
+    name: "German Shepherd 2"
+  },
+  {
+    image_link: "https://api-ninjas.com/images/dogs/siberian_husky.jpg",
+    good_with_children: 5,
+    good_with_other_dogs: 5,
+    shedding: 4,
+    grooming: 2,
+    drooling: 1,
+    coat_length: 1,
+    good_with_strangers: 5,
+    playfulness: 5,
+    protectiveness: 1,
+    trainability: 3,
+    energy: 5,
+    barking: 5,
+    min_life_expectancy: 12,
+    max_life_expectancy: 14,
+    max_height_male: 23.5,
+    max_height_female: 23.5,
+    max_weight_male: 60,
+    max_weight_female: 50,
+    min_height_male: 21,
+    min_height_female: 21,
+    min_weight_male: 45,
+    min_weight_female: 35,
+    name: "Siberian Husky 3"
+  },
+  
 ]
 
 export default data
