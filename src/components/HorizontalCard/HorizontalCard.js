@@ -18,8 +18,11 @@ function HorizontalCard({ dog }) {
                     source={{ uri: dog.image_link }}
                     style={styles.petImage}
                 />
-                <Text style={styles.petName}>{dog.name} </Text>
-                <Text style={styles.petInfo}>Protectiveness: {dog.protectiveness}</Text>
+                {dog.name.trim().split(' ').length == 1 ? 
+                            (<Text style={styles.petName}>{dog.name} </Text>) : 
+                            (<Text style={styles.petName}>{dog.name.split(' ')[0]}... </Text>)}
+
+                <Text style={styles.petInfo}>Protection: {dog.protectiveness}</Text>
                 <Text styles={styles.petInfo}>Energy: {dog.energy}</Text>
             </View>
         </TouchableWithoutFeedback>

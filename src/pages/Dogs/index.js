@@ -1,14 +1,50 @@
+import { useState, useEffect } from 'react'
+
 import { View, Text, FlatList, ImageBackground, ScrollView, StyleSheet, SectionList } from 'react-native'
 
 import { useNavigation } from '@react-navigation/native'
 
 import HorizontalCard from '../../components/HorizontalCard/HorizontalCard'
 
-import data from '../../data/data'
+//import data from '../../data/data'
 import ListCard from '../../components/Listcard'
 
+import api, { API_KEY } from '../../services/api'
 
 function Dogs() {
+
+    const [data, setData] = useState([])
+    const [protectionData, setProtectionData] = useState([])
+
+    useEffect(()=>{
+
+        const getData = async () =>{
+            const response = await api.get('dogs?energy=5', {
+                headers: {
+                    'X-Api-Key': API_KEY,
+                }
+            })
+            setData(response.data)
+        }
+
+        getData()
+
+    }, [])
+
+    useEffect(()=>{
+
+        const getData = async () =>{
+            const response = await api.get('dogs?protectiveness=5&limit=1', {
+                headers: {
+                    'X-Api-Key': API_KEY,
+                }
+            })
+            setProtectionData(response.data)
+        }
+
+        getData()
+
+    }, [])
 
     const navigation = useNavigation()
 
@@ -18,12 +54,12 @@ function Dogs() {
 
     const sections = [
         {
-            title: 'Recommended',
+            title: 'For protecttion',
             horizontal: true,
-            data: data,
+            data: protectionData.slice(0,5),
         },
         {
-            title: 'Our pets',
+            title: 'See more',
             horizontal: false,
             data: data,
         },
@@ -71,7 +107,7 @@ function Dogs() {
 
 const styles = StyleSheet.create({
     label: {
-        fontSize: 20,
+        fontSize: 26,
         fontWeight: 'bold',
         marginVertical: 10,
     },
