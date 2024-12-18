@@ -34,11 +34,11 @@ Dog Book is an application designed to help users find information about various
 Here are some screenshots of the application:
 
 - Home
-  ![Home](src/assets/images/screen/home.png)
+  <img src="src/assets/images/screen/home.png" alt="Home" width="300">
 - Dog List
-  ![Dog List](src/assets/images/screen/dog_list.png)
+  <img src="src/assets/images/screen/dog_list.png" alt="Dog List" width="300">
 - Dog Details
-  ![Dog Details](src/assets/images/screen/dog_detail.png)
+  <img src="src/assets/images/screen/dog_detail.png" alt="Dog Details" width="300">
 
 ## Installation
 
@@ -67,5 +67,4 @@ To run this project, follow these steps:
 ## Usage
 
 Once the server is running, use the Expo app on your device or an emulator to view the Dog Book app. Browse through different dog breeds, view their details, and find the perfect dog to adopt.
-
 
