@@ -33,11 +33,11 @@ Dog Book is an application designed to help users find information about various
 
 Here are some screenshots of the application:
 
-- Home
+- Home<br>
   <img src="src/assets/images/screen/home.png" alt="Home" width="300">
-- Dog List
+- Dog List<br>
   <img src="src/assets/images/screen/dog_list.png" alt="Dog List" width="300">
-- Dog Details
+- Dog Details<br>
   <img src="src/assets/images/screen/dog_detail.png" alt="Dog Details" width="300">
 
 ## Installation
