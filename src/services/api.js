@@ -1,4 +1,4 @@
-const API_KEY = 'aYSweVHPlzX0eKVCrrcuqQ==NeNaai3LaUAWRekT'
+const API_KEY = 'YOU_API_KEY_HERE'
 const url = 'https://api.api-ninjas.com/v1/'
 
 import axios from 'axios'

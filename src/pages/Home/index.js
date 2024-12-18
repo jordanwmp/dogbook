@@ -4,10 +4,9 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import styles  from './styles'
 import { useNavigation } from '@react-navigation/native'
 
-function Home() {
+const Home = () => {
 
     const navigation = useNavigation()
-    //navigation.navigate('Lista')
 
     return (
         <View style={styles.container}>

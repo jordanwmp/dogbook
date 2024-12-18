@@ -1,43 +1,49 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         flex: 1,
         alignItems: 'center',
-        paddingTop: 20
+        backgroundColor: '#f8f8f8',
+        paddingTop: 20,
     },
-    petImage:{
+    petImage: {
         width: '90%',
-        height: 200,
-        borderRadius: 12
+        height: 300,
+        borderRadius: 15,
+        marginBottom: 20,
     },
     cardInfo: {
-        backgroundColor: '#fff',
-        borderRadius: 12,
-        marginTop: 12,
+        backgroundColor: '#ffffff',
+        borderRadius: 15,
+        padding: 20,
         width: '90%',
-        minHeight: 300,
-        paddingTop: 30,
-        paddingHorizontal:8
-    },
-    petName:{
-        fontSize: 22,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        marginBottom: 15
-    },
-    petInfo:{
-        color: '#666',
-        borderBottomWidth: 0.5,
-        borderBottomColor: '#666',
-        fontSize: 14,
-        paddingBottom: 5,
-        marginBottom: 10
-    },
-    textLabel:{
-        fontSize: 16,
-        fontWeight: 'bold',
-        marginBottom: 15
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2
+        }, 
+        shadowOpacity: 0.2, 
+        shadowRadius: 5, 
+        elevation: 3,
+    }, 
+    petName: { 
+        fontSize: 24, 
+        fontWeight: 'bold', 
+        textAlign: 'center', 
+        color: '#333333', 
+        marginBottom: 15, 
+    }, 
+    textLabel: { 
+        fontSize: 18, 
+        fontWeight: 'bold', 
+        color: '#555555', 
+        marginBottom: 10, 
+    }, 
+    petInfo: { 
+        fontSize: 16, 
+        color: '#666666', 
+        marginBottom: 10, 
     }
 })
 

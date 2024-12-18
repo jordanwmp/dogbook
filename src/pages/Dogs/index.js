@@ -1,17 +1,11 @@
 import { useState, useEffect } from 'react'
-
-import { View, Text, FlatList, ImageBackground, ScrollView, StyleSheet, SectionList } from 'react-native'
-
-import { useNavigation } from '@react-navigation/native'
-
+import { View, Text, FlatList, StyleSheet, SectionList } from 'react-native'
 import HorizontalCard from '../../components/HorizontalCard/HorizontalCard'
-
-//import data from '../../data/data'
 import ListCard from '../../components/Listcard'
 
 import api, { API_KEY } from '../../services/api'
 
-function Dogs() {
+const Dogs = () => {
 
     const [data, setData] = useState([])
     const [protectionData, setProtectionData] = useState([])
@@ -45,12 +39,6 @@ function Dogs() {
         getData()
 
     }, [])
-
-    const navigation = useNavigation()
-
-    function callDetail() {
-        navigation.navigate('Detalhes', { name: 'Husk Siberiano' })
-    }
 
     const sections = [
         {
